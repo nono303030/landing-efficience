@@ -401,7 +401,12 @@ p {
 /* Benefits Section */
 .benefits {
     padding: 80px 0;
-    background: #FAFAFA;
+    background: linear-gradient(135deg, #FAFAFA 0%, #FFFFFF 100%);
+}
+
+.benefits h2 {
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .section-header {
@@ -413,7 +418,8 @@ p {
     font-size: 1.125rem;
     color: var(--color-text-secondary);
     max-width: 700px;
-    margin: 0 auto;
+    margin: 0 auto 3rem;
+    text-align: center;
 }
 
 /* Toggle */
@@ -457,6 +463,11 @@ p {
     box-shadow: 0 4px 12px rgba(139, 92, 246, 0.25);
 }
 
+.comparisons {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 .comparison {
     display: none;
 }
@@ -479,8 +490,11 @@ p {
 
 .comparison-list {
     list-style: none;
-    max-width: 900px;
-    margin: 0 auto;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 .comparison-header {
@@ -492,6 +506,10 @@ p {
     text-align: center;
     transition: all 0.3s ease;
     border: none;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
 }
 
 .sans-header {
@@ -505,18 +523,37 @@ p {
 }
 
 .comparison-list li {
-    padding: 1rem 0;
+    padding: 1.25rem 1.5rem;
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.7;
     display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
+    align-items: center;
+    gap: 1rem;
     color: var(--color-text-primary);
     border-bottom: 1px solid #F3F4F6;
+    background: var(--color-white);
+}
+
+.comparison-list li:first-child {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 .comparison-list li:last-child {
     border-bottom: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    .comparison-list li {
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+    
+    .toggle-buttons {
+        max-width: 100%;
+    }
 }
 
 /* Benefit Cards */
