@@ -179,9 +179,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     animateValue(entry.target, 0, -65, 1000);
                 } else if (value === '+47%') {
                     animateValue(entry.target, 0, 47, 1000);
-                } else if (value === '2h') {
-                    animateValue(entry.target, 0, 2, 1000);
                 }
+                // La troisième métrique (✓) n'a pas besoin d'animation
             }
         });
     }, observerOptions);
@@ -241,49 +240,49 @@ window.addEventListener('load', () => {
 // Quiz IA & Automation
 const quizData = [
     {
-        question: "Lorsqu'on veut automatiser un processus de suivi client, quelle est la première étape logique ?",
+        question: "Quand on parle d'IA et d'automatisation dans une agence comme Efficience Strategy, par quoi faut-il commencer ?",
         answers: [
-            { text: "Choisir les outils (Make, Zapier, etc.)", correct: false },
-            { text: "Cartographier le flux et les points de données", correct: true },
-            { text: "Lancer un test rapide et voir si ça fonctionne", correct: false }
+            { text: "Par choisir l'outil le plus \"\u00e0 la mode\" (ChatGPT, Make, etc.)", correct: false },
+            { text: "Par cartographier le process et les points de données à chaque étape", correct: true },
+            { text: "Par automatiser un maximum de tâches en même temps", correct: false }
         ],
-        feedback: "Exactement. L'outil vient après la compréhension du flux. C'est cette étape qui garantit un système fiable et maintenable."
+        feedback: "Exactement. L'outil vient après. Ce qui compte d'abord, c'est de comprendre le flux (acquisition, suivi, reporting) pour créer un système fiable et maintenable."
     },
     {
-        question: "Dans le cadre du marketing automation, une IA doit être utilisée principalement pour :",
+        question: "À quoi devrait servir l'IA en priorité dans une agence marketing orientée acquisition ?",
         answers: [
-            { text: "Assister la décision et réduire les tâches répétitives", correct: true },
-            { text: "Remplacer complètement l'humain dans la stratégie", correct: false },
-            { text: "Générer massivement du contenu sans contrôle qualité", correct: false }
+            { text: "À remplacer complètement l'équipe", correct: false },
+            { text: "À assister la décision, réduire les tâches répétitives et améliorer la qualité des livrables", correct: true },
+            { text: "À produire du contenu sans validation", correct: false }
         ],
-        feedback: "Bien vu. Une IA performante en marketing automation agit comme un copilote intelligent, pas un pilote automatique."
+        feedback: "Une IA bien utilisée agit comme un copilote : elle accélère, sécurise et enrichit le travail de l'équipe, sans la remplacer."
     },
     {
-        question: "Quelle est la meilleure façon d'évaluer la performance d'une automation marketing ?",
+        question: "Quand on met en place une automatisation IA pour le marketing (lead gen, nurturing…), quel est le meilleur indicateur de succès ?",
         answers: [
-            { text: "En regardant le nombre d'automations créées", correct: false },
-            { text: "En calculant le temps gagné", correct: false },
-            { text: "En mesurant l'impact business (taux de conversion, réactivité, satisfaction)", correct: true }
+            { text: "Le nombre d'automatisations créées dans l'outil", correct: false },
+            { text: "Le temps gagné, même si les résultats business ne bougent pas", correct: false },
+            { text: "L'impact sur les KPI d'acquisition : leads qualifiés, coût par lead, taux de conversion", correct: true }
         ],
-        feedback: "Oui, le succès d'une automation, ce sont ses résultats mesurables — pas sa complexité."
+        feedback: "Le succès se mesure sur les KPI business, pas seulement sur le temps gagné ou le volume d'automations."
     },
     {
-        question: "Chez LUMA Arles, j'ai automatisé la gestion des avis clients. Quel a été le plus gros bénéfice ?",
+        question: "Comment l'IA peut-elle aider concrètement Efficience Strategy sur les campagnes Social Ads / Google Ads ?",
         answers: [
-            { text: "Diminution du temps de traitement et meilleure réactivité", correct: true },
-            { text: "Suppression des équipes dédiées", correct: false },
-            { text: "Augmentation du nombre d'avis négatifs traités", correct: false }
+            { text: "En lançant automatiquement des campagnes sans validation", correct: false },
+            { text: "En aidant à analyser les performances, tester des variations créatives et prioriser les optimisations", correct: true },
+            { text: "En remplaçant complètement les media buyers", correct: false }
         ],
-        feedback: "Exact. L'automation a permis de gagner du temps et de rendre la relation client plus fluide — sans perte de qualité."
+        feedback: "L'IA est un excellent assistant pour analyser, tester et prioriser — mais la stratégie média reste humaine."
     },
     {
-        question: "Quand on crée un système automatisé, la clé du succès, c'est…",
+        question: "Quand on conçoit une automatisation IA pour le marketing digital, la clé est de…",
         answers: [
-            { text: "Concevoir pour être réutilisable et mesurable", correct: true },
-            { text: "Automatiser tout ce qui bouge", correct: false },
-            { text: "Ajouter un maximum d'IA pour impressionner", correct: false }
+            { text: "Concevoir un système lisible, documenté, et facilement ajustable", correct: true },
+            { text: "Chercher la solution la plus complexe possible", correct: false },
+            { text: "Automatiser tout, même ce qui apporte peu de valeur", correct: false }
         ],
-        feedback: "Exactement. L'automation utile est celle qui reste lisible, évolutive et mesurable."
+        feedback: "Un bon système IA est simple à comprendre, bien documenté et orienté valeur. C'est ce que j'essaie toujours de construire."
     }
 ];
 
@@ -410,16 +409,16 @@ const showResults = () => {
     
     // Personalized message based on score
     if (score <= 2) {
-        resultsTitle.textContent = "L'IA, c'est bien… mais avec un copilote, c'est mieux ! 😊";
-        resultsMessage.textContent = "Pas de souci, c'est pour ça que je suis là. Ensemble, on structure vos process avec méthode.";
+        resultsTitle.textContent = "L'IA, c'est bien. Avec une méthode, c'est mieux.";
+        resultsMessage.textContent = "Mon rôle : structurer des usages IA mesurables et alignés avec vos objectifs.";
         resultsIcon.textContent = '🤔';
     } else if (score <= 4) {
-        resultsTitle.textContent = "Vous avez de bons réflexes d'automation ! 👏";
-        resultsMessage.textContent = "Encore un peu de structuration et c'est parfait. Je peux vous aider à passer au niveau supérieur.";
+        resultsTitle.textContent = "Bons réflexes. On peut aller plus loin.";
+        resultsMessage.textContent = "Avec plus de structure (process, data, reporting), l'IA devient un vrai levier de performance.";
         resultsIcon.textContent = '💪';
     } else {
-        resultsTitle.textContent = "Félicitations ! Vous pensez comme un Product Owner data-driven 😎";
-        resultsMessage.textContent = "On parle le même langage. Imaginons ensemble ce qu'on pourrait construire pour Be Siouxx !";
+        resultsTitle.textContent = "Même vision : IA, data, performance.";
+        resultsMessage.textContent = "C'est ce que je veux mettre au service d'Efficience Strategy.";
         resultsIcon.textContent = '🎯';
     }
     
