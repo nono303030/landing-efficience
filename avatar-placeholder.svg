@@ -1,0 +1,7 @@
+<svg width="250" height="250" viewBox="0 0 250 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="250" height="250" rx="24" fill="#FFFFFF"/>
+  <rect width="250" height="250" rx="24" fill="none" stroke="#E5E5E5" stroke-width="2"/>
+  <circle cx="125" cy="90" r="35" fill="#FF6B35"/>
+  <path d="M125 135C95 135 70 155 70 180V220C70 230 75 235 85 235H165C175 235 180 230 180 220V180C180 155 155 135 125 135Z" fill="#FF6B35"/>
+  <text x="125" y="200" font-family="Poppins, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#111111">Votre Photo Ici</text>
+</svg>
